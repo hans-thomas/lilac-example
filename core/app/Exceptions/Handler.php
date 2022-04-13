@@ -53,7 +53,7 @@
             return match ( true ) {
                 $e instanceof ValidationException => parent::render( $request, $e ),
                 $e instanceof AuthorizationException => self::throw( $e, 9998 ),
-                $e instanceof NotFoundHttpException => self::throw( $e, 9997, 'Route not found!' ),
+                $e instanceof NotFoundHttpException => self::throw( $e, 9997, 'Route not found!',404 ),
                 $e instanceof QueryException => self::throw( $e, 9996, $e->getPrevious()->getMessage(), 500 ),
                 $e instanceof SphinxException, $e instanceof PolluxException, $e instanceof HorusException, $e instanceof AliciaException => self::throw( $e ),
                 default => self::throw( $e, responseCode: 500 )
