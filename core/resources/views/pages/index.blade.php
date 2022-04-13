@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
-@include('sections.header',['title' => 'index page'])
+@include('sections.header',['title' => 'صفحه اصلی'])
 
 <body>
 <!-- start preloader area -->
@@ -15,7 +15,7 @@
 <!-- end preloader area -->
 
 <!-- start scroll top button -->
-<div class="home2 scroll-top">
+<div class="scroll-top">
     <button class="top-to-btn">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -23,42 +23,7 @@
 <!-- end scroll top button -->
 
 <!-- start fancybox area -->
-<div class="home2 fancybox">
-    <div class="fancybox-bg"></div>
-    <div class="fancybox-content">
-        <div class="row">
-            <div class="col-md-6 img-area">
-                <div class="popup-img">
-                    <img src="assets/images/fancybox/img2.jpg" alt="Popup">
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="popup-content text-center" data-img="assets/images/fancybox/shape.png">
-                    <h2>دریافت 20٪ تخفیف برای ارسال به صندوق پستی شما</h2>
-                    <h5>ثبت نام در خبرنامه</h5>
-                    <p>از خبرنامه ما لذت ببرید و از آخرین اخبار و فروش ویژه مطلع شوید. آدرس ایمیل خود را اینجا وارد
-                        کنید!</p>
-                    <form action="#!">
-                        <div class="d-flex justify-content-center">
-                            <input type="email" placeholder="ایمیلت رو بزن..." class="inputs">
-                            <button type="submit" class="fancy-btn">ثبت</button>
-                        </div>
-                        <label for="term">
-                            <input type="checkbox" class="check" id="term">
-                            <span class="check-custom"></span>
-                            دیگه نشون نده
-                        </label>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="close-fancy">
-            <button>
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-    </div>
-</div>
+@includeWhen(false,'sections.fancybox')
 <!-- end fancybox area -->
 
 <!-- start header area -->
@@ -166,8 +131,8 @@
     <!-- end topbar area -->
 
     <!-- start menubar area -->
-    @include('sections.menubar')
-    <!-- end menubar area -->
+@include('sections.menubar')
+<!-- end menubar area -->
 </header>
 <!-- end header area -->
 
@@ -2420,7 +2385,7 @@
 <!-- end quick-view area -->
 
 <!-- start client area -->
-<section class="home1 home2 client pb-80">
+<section class="home1 client pb-80">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -2492,7 +2457,7 @@
 <!-- end client area -->
 
 <!-- start blog area -->
-<section class="home1 home2 blog">
+<section class="home1 blog">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -2582,64 +2547,7 @@
 <!-- end blog area -->
 
 <!-- start overview area -->
-<section class="home1 home2 overview">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="bg">
-                    <div class="bg-inner">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6">
-                                <div class="item d-flex align-items-center justify-content-center">
-                                    <div class="icon">
-                                        <i class="flaticon-fire-truck"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>حمل و نقل رایگان</h5>
-                                        <h6>سفارشات بالای ۶۰۰ هزار تومان</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="item d-flex align-items-center justify-content-center">
-                                    <div class="icon">
-                                        <i class="flaticon-cards"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>پرداخت سریع</h5>
-                                        <h6>پرداخت ۱۰۰% مطمئن</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="item d-flex align-items-center justify-content-center">
-                                    <div class="icon">
-                                        <i class="flaticon-gift-box"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>گواهی هدیه</h5>
-                                        <h6>اکنون ۱ میلیون بخرید</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <div class="item d-flex align-items-center justify-content-center last-item">
-                                    <div class="icon">
-                                        <i class="flaticon-customer-service"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h5>پشتیبانی</h5>
-                                        <h6>پشتیبانی سریع</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('sections.overview')
 <!-- end overview area -->
 
 <!-- start footer area -->
