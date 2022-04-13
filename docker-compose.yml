@@ -65,7 +65,7 @@ services:
     command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
     volumes:
       - ./prometheus/conf.d/prometheus.yml:/etc/prometheus/prometheus.yml
-      - prometheus-data:/prometheus
+      - prometheus_data:/prometheus
 
   grafana:
     image: grafana/grafana
@@ -124,7 +124,7 @@ services:
     expose:
       - "3306"
     volumes:
-      - database:/var/lib/mysql
+      - lilac_database:/var/lib/mysql
   #      - ./database/config.d/setup.sql:/docker-entrypoint-initdb.d/setup.sql
 
   adminer:
@@ -138,6 +138,5 @@ volumes:
   data:
   cache:
   php:
-  prometheus-data:
-  matomo:
-  database:
+  prometheus_data:
+  lilac_database:

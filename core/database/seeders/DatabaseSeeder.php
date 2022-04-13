@@ -5,7 +5,8 @@
     use Database\Seeders\Core\PreferenceSeeder;
     use Database\Seeders\Core\RoleAndPermissionSeeder;
     use Database\Seeders\Core\UserSeeder;
-    use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+    use Database\Seeders\Shop\CategorySeeder;
+    use Database\Seeders\Shop\ProductSeeder;
     use Illuminate\Database\Seeder;
 
     class DatabaseSeeder extends Seeder {
@@ -20,6 +21,8 @@
                 UserSeeder::class,
                 PreferenceSeeder::class,
 
+                CategorySeeder::class,
+                ProductSeeder::class
             ] );
         }
     }
