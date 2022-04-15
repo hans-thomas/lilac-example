@@ -3,6 +3,7 @@
     namespace App\Providers;
 
     use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Pagination\Paginator;
     use Illuminate\Support\Facades\DB;
     use Illuminate\Support\Facades\Log;
     use Illuminate\Support\Facades\Route;
@@ -25,6 +26,7 @@
          * @return void
          */
         public function boot() {
+            Paginator::useBootstrap();
             if ( env( 'DB_LOG_STATUS', false ) ) {
                 DB::listen( function( $query ) {
                     Log::info( $query->sql, $query->bindings //    $query->time

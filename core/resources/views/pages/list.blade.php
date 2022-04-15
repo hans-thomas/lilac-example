@@ -73,638 +73,75 @@
             </div>
             <div class="col-lg-12 home1 trending">
                 <div class="row">
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p1a.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p1b.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی راحتی لوکس سفید</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
+                    @foreach($products as $product)
+                        <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single">
+                                <div class="image">
+                                    <a href="{{ route('products.show',$product) }}">
+                                        <img src="{{ asset('assets/images/home1/product/p1a.png') }}" class="img-main"
+                                             alt="Product">
+                                    </a>
+                                    <a href="{{ route('products.show',$product) }}">
+                                        <img src="{{ asset('assets/images/home1/product/p1b.png') }}" class="img-hover"
+                                             alt="Product">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <a href="{{ route('products.show',$product) }}">
+                                        <h6>{{ $product->title }}</h6>
+                                    </a>
+                                    <p>{{ $product->price.' هزار تومن' }}</p>
+                                    <ul class="rating d-flex">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
                                     </ul>
+                                    <div class="action">
+                                        <ul class="d-flex">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="flaticon-heart"></i>
+                                                    <p class="my-tooltip">
+                                                        علاقه مندی
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="flaticon-shopping-cart-1"></i>
+                                                    <p class="my-tooltip">
+                                                        خرید
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" data-bs-toggle="modal"
+                                                   data-bs-target="#modal-{{ $product->id }}">
+                                                    <i class="flaticon-visibility"></i>
+                                                    <p class="my-tooltip">
+                                                        نمایش
+                                                    </p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="flaticon-refresh"></i>
+                                                    <p class="my-tooltip">
+                                                        مقایسه
+                                                    </p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p2a.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p2b.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی لوکس باغ</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p3a.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p3b.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی سالن</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p4a.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p4b.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی داپیباس</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p5a.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p5b.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>مبل چوبی لوکس</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p1b.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p1a.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی راحتی استیل طلایی</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p2b.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p2a.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>صندلی راحتی لوکس سفید</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p3b.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p3a.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>مبل لوکس شرکتی</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p4b.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p4a.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>سالن لوکس تجاری</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-1-5 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single">
-                            <span class="offer">-۲۹%</span>
-                            <div class="image">
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p5b.png" class="img-main" alt="Product">
-                                </a>
-                                <a href="shop-detail-left.html">
-                                    <img src="assets/images/home1/product/p5a.png" class="img-hover" alt="Product">
-                                </a>
-                            </div>
-                            <div class="content">
-                                <a href="shop-detail-left.html">
-                                    <h6>مبل مخملی قرمز</h6>
-                                </a>
-                                <p><span>۱ میلیون</span> - ۵۰۰۰۰۰ تومان</p>
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <div class="action">
-                                    <ul class="d-flex">
-                                        <li>
-                                            <a href="wishlist.html">
-                                                <i class="flaticon-heart"></i>
-                                                <p class="my-tooltip">
-                                                    علاقه مندی
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="cart.html">
-                                                <i class="flaticon-shopping-cart-1"></i>
-                                                <p class="my-tooltip">
-                                                    خرید
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                <i class="flaticon-visibility"></i>
-                                                <p class="my-tooltip">
-                                                    نمایش
-                                                </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="compare.html">
-                                                <i class="flaticon-refresh"></i>
-                                                <p class="my-tooltip">
-                                                    مقایسه
-                                                </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pagination -->
-                    <div class="col-lg-12">
-                        <div class="pages">
-                            <ul class="d-flex justify-content-center">
-                                <li><a href="#!"><i class="flaticon-chevron"></i></a></li>
-                                <li><a href="#!" class="active">۱</a></li>
-                                <li><a href="#!">۲</a></li>
-                                <li><a href="#!">۳</a></li>
-                                <li><a href="#!">۴</a></li>
-                                <li><a href="#!"><i class="flaticon-chevron-1"></i></a></li>
-                            </ul>
-                        </div>
+                @endforeach
+                <!-- pagination -->
+                    <div class="custom-pagination">
+                        {!! $products->links() !!}
                     </div>
                 </div>
             </div>
@@ -718,131 +155,114 @@
 <!-- end overview area -->
 
 <!-- start footer area -->
-<footer class="footer">
-    <!-- start footer-top area -->
-    <section class="footer-top pb-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="content">
-                        <div class="title">
-                            <h5>درباره ما</h5>
-                        </div>
-                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</p>
-                        <div class="follow">
-                            <h6>راه های ارتباطی</h6>
-                            <ul class="d-flex social">
-                                <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-skype"></i></a></li>
-                                <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="content">
-                        <div class="title">
-                            <h5>اکانت من</h5>
-                        </div>
-                        <ul>
-                            <li><a href="my-account.html">اکانت من</a></li>
-                            <li><a href="wishlist.html">لیست علاقه مندی ها</a></li>
-                            <li><a href="login.html">ورود</a></li>
-                            <li><a href="contact.html">آدرس</a></li>
-                            <li><a href="shop-4-column.html">محصول جدید</a></li>
-                            <li><a href="faq.html">سوالات متداول</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="content">
-                        <div class="title">
-                            <h5>پشتیبانی</h5>
-                        </div>
-                        <ul>
-                            <li><a href="#!">کمک</a></li>
-                            <li><a href="contact.html">تماس با ما</a></li>
-                            <li><a href="#!">بازخورد</a></li>
-                            <li><a href="#!">خدمات مشتری</a></li>
-                            <li><a href="#!">رزرو</a></li>
-                            <li><a href="#!">مکان های فروشگاه</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="content">
-                        <div class="title">
-                            <h5>تماس با ما</h5>
-                        </div>
-                        <ul class="address">
-                            <li class="d-flex align-items-center">
-                                <div class="icon">
-                                    <i class="flaticon-phone"></i>
-                                </div>
-                                <div class="text">
-                                    <h6>تماس</h6>
-                                    <p>۰۹۱۲۳۴۵۶۷۸۹</p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="icon">
-                                    <i class="flaticon-mail"></i>
-                                </div>
-                                <div class="text">
-                                    <h6>ایمیل</h6>
-                                    <p>makhlaghi۳۴۹@gmail.com</p>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <div class="icon">
-                                    <i class="flaticon-placeholder"></i>
-                                </div>
-                                <div class="text">
-                                    <h6>اینستاگرام</h6>
-                                    <p>Mahdi__۰۳۷</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="content">
-                        <div class="title">
-                            <h5>لینک های مفید</h5>
-                        </div>
-                        <ul>
-                            <li><a href="#!">حریم خصوصی</a></li>
-                            <li><a href="#!">نقشه سایت</a></li>
-                            <li><a href="#!">محل فروشگاه</a></li>
-                            <li><a href="my-account.html">اکانت من</a></li>
-                            <li><a href="#!">پیگیری سفارشات</a></li>
-                            <li><a href="#!">شرایط استفاده از خدمات</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- end footer-top area -->
+@include('sections.footer')
+<!-- end footer area -->
 
-    <!-- start footer-bottom area -->
-    <section class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="border-area">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-md-6">
-                                <p>کلیه حقوق این قالب متعلق به براکت است</p>
+<!-- start product-detail modal -->
+@foreach($products as $product)
+    <div class="modal fade quick-view-modal" id="modal-{{ $product->id }}" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="image-area">
+                                <div class="product-gallery swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <img id="zoom_01" src="{{ asset('assets/images/shop/img1.jpg') }}"
+                                                 alt="Product"
+                                                 data-zoom-image="{{ asset('assets/images/shop/img1.jpg') }}">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img id="zoom_02" src="{{ asset('assets/images/shop/img2.jpg') }}"
+                                                 alt="Product"
+                                                 data-zoom-image="a{{ asset('assets/images/shop/img2.jpg') }}">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img id="zoom_03" src="{{ asset('assets/images/shop/img3.jpg') }}"
+                                                 alt="Product"
+                                                 data-zoom-image="{{ asset('assets/images/shop/img3.jpg') }}">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img id="zoom_04" src="{{ asset('assets/images/shop/img4.jpg') }}"
+                                                 alt="Product"
+                                                 data-zoom-image="{{ asset('assets/images/shop/img4.jpg') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-thumb swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="item swiper-slide">
+                                            <img src="{{ asset('assets/images/shop/img-sm1.jpg') }}" alt="Product">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img src="{{ asset('assets/images/shop/img-sm2.jpg') }}" alt="Product">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img src="{{ asset('assets/images/shop/img-sm3.jpg') }}" alt="Product">
+                                        </div>
+                                        <div class="item swiper-slide">
+                                            <img src="{{ asset('assets/images/shop/img-sm4.jpg') }}" alt="Product">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="payment">
-                                    <ul class="d-flex justify-content-end">
-                                        <li>
+                        </div>
 
-                                        </li>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="detail-content">
+                                <p class="stock">
+                                    دسترسی:<span>{{ $product->quantity > 0 ? ' موجود در انبار':'اتمام موجودی'}}</span>
+                                </p>
+                                <h5>
+                                    <a href="#">{{ $product->title }}</a>
+                                </h5>
+                                <div class="review-area d-flex align-items-center">
+                                    <ul class="rating d-flex">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                </div>
+                                <h5>{{ $product->price .' هزار تومن' }}</h5>
+                                <p class="desc">{{ $product->description }}</p>
+
+                                <div class="category">
+                                    <p>دسته بندی :
+                                        @foreach($product->categories as $category)
+                                            <a href="#">{{ $category->name }}</a> {{ $loop->last ? null:', ' }}
+                                        @endforeach
+                                    </p>
+                                </div>
+
+                                <div class="border-area">
+                                    <div class="cart-part d-flex align-items-center">
+                                        <div class="d-flex number-spinner">
+                                            <button data-dir="dwn" class="down-btn"><i class="fas fa-minus"></i>
+                                            </button>
+                                            <input type="text" class="form-control text-center input-value" value="1">
+                                            <button data-dir="up" class="up-btn"><i class="fas fa-plus"></i></button>
+                                        </div>
+                                        <a href="#!" class="cart">سبد خرید <span class="btn-dot"></span></a>
+                                        <div class="add-more d-flex align-items-center">
+                                            <a href="#!"><i class="flaticon-heart"></i></a>
+                                            <a href="#!"><i class="flaticon-refresh"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="share d-flex align-items-center">
+                                    <h5>اشتراک گذاری : </h5>
+                                    <ul class="d-flex">
+                                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
+                                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -851,132 +271,11 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- end footer-bottom area -->
-</footer>
-<!-- end footer area -->
-
-<!-- start product-detail modal -->
-<div class="modal fade quick-view-modal" id="exampleModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6">
-                        <div class="image-area">
-                            <div class="product-gallery swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <img id="zoom_01" src="assets/images/shop/img1.jpg" alt="Product"
-                                             data-zoom-image="assets/images/shop/img1.jpg">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img id="zoom_02" src="assets/images/shop/img2.jpg" alt="Product"
-                                             data-zoom-image="assets/images/shop/img2.jpg">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img id="zoom_03" src="assets/images/shop/img3.jpg" alt="Product"
-                                             data-zoom-image="assets/images/shop/img3.jpg">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img id="zoom_04" src="assets/images/shop/img4.jpg" alt="Product"
-                                             data-zoom-image="assets/images/shop/img4.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-thumb swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="item swiper-slide">
-                                        <img src="assets/images/shop/img-sm1.jpg" alt="Product">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img src="assets/images/shop/img-sm2.jpg" alt="Product">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img src="assets/images/shop/img-sm3.jpg" alt="Product">
-                                    </div>
-                                    <div class="item swiper-slide">
-                                        <img src="assets/images/shop/img-sm4.jpg" alt="Product">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 col-md-6">
-                        <div class="detail-content">
-                            <p class="stock">دسترسی:<span> در انبار</span></p>
-                            <h5>مجموعه های مبلمان لوکس طرح زندگی </h5>
-                            <div class="review-area d-flex align-items-center">
-                                <ul class="rating d-flex">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                </ul>
-                                <p>(۲ نظر مشتری)</p>
-                            </div>
-                            <h5>۵۰۰۰۰۰ تومان – <span>۱ میلیون</span></h5>
-                            <p class="desc">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-                                طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم
-                                است </p>
-
-                            <div class="color-pallate d-flex align-items-center">
-                                <p>رنگ : </p>
-                                <ul class="d-flex">
-                                    <li>
-                                        <a href="#!" class="blue"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="red"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#!" class="pink"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="category">
-                                <p>دسته بندی : <a href="#!">خانه,</a> <a href="#!">تخت,</a> <a href="#!">مبل</a></p>
-                                <p>برچسب : <a href="#!">خانه,</a> <a href="#!">مبلمان</a></p>
-                            </div>
-
-                            <div class="border-area">
-                                <div class="cart-part d-flex align-items-center">
-                                    <div class="d-flex number-spinner">
-                                        <button data-dir="dwn" class="down-btn"><i class="fas fa-minus"></i></button>
-                                        <input type="text" class="form-control text-center input-value" value="1">
-                                        <button data-dir="up" class="up-btn"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                    <a href="#!" class="cart">سبد خرید <span class="btn-dot"></span></a>
-                                    <div class="add-more d-flex align-items-center">
-                                        <a href="#!"><i class="flaticon-heart"></i></a>
-                                        <a href="#!"><i class="flaticon-refresh"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="share d-flex align-items-center">
-                                <h5>اشتراک گذاری : </h5>
-                                <ul class="d-flex">
-                                    <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#!"><i class="fab fa-google-plus-g"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
+@endforeach
 <!-- end product-detail modal -->
 
-@include('sections.footer')
+@include('sections.scripts')
 </body>
 
 

@@ -9059,3 +9059,7 @@ p {
 .coming-soon .content .social li a:hover i {
     color: var(--white);
 }
+
+.custom-pagination ul {
+    justify-content: center;
+}
