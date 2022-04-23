@@ -7,6 +7,7 @@
     use Database\Seeders\Core\UserSeeder;
     use Database\Seeders\Shop\CategorySeeder;
     use Database\Seeders\Shop\ProductSeeder;
+    use Database\Seeders\Shop\SetSeeder;
     use Illuminate\Database\Seeder;
 
     class DatabaseSeeder extends Seeder {
@@ -22,7 +23,8 @@
                 PreferenceSeeder::class,
 
                 CategorySeeder::class,
-                ProductSeeder::class
+                ProductSeeder::class,
+                SetSeeder::class,
             ] );
         }
     }

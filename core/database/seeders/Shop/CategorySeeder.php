@@ -12,6 +12,6 @@
          * @return void
          */
         public function run() {
-            Category::factory()->count( 400 )->create();
+            Category::factory()->count( 100 )->create();
         }
     }

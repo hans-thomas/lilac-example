@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-@include('sections.header',['title' => 'صفحه اصلی'])
-
+<head>
+    @include('sections.header')
+    <title>صفحه خانه</title>
+</head>
 <body>
 <!-- start preloader area -->
 <div class="preloader">

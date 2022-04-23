@@ -19,4 +19,8 @@
         public function categories(): BelongsToMany {
             return $this->belongsToMany( Category::class );
         }
+
+        public function sets(): BelongsToMany {
+            return $this->belongsToMany( Set::class );
+        }
     }
