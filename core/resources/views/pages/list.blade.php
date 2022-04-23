@@ -232,7 +232,20 @@
                                 </div>
                                 <h5>{{ $product->price .' هزار تومن' }}</h5>
                                 <p class="desc">{{ $product->description }}</p>
-
+                                <div class="color-pallate d-flex align-items-center">
+                                    <p>رنگ : </p>
+                                    <ul class="d-flex">
+                                        <li>
+                                            <a href="#!" class="blue"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="red"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#!" class="pink"></a>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="category">
                                     <p>دسته بندی :
                                         @foreach($product->categories as $category)

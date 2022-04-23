@@ -10,5 +10,13 @@
     } )->name( 'products.index' );
 
     Route::get( '/details/{product}', function( \App\Models\Shop\Product $product ) {
-        return view( 'pages.detail', compact( 'product' ) );
+        $product->loadMissing( 'categories' );
+        $featured = \App\Models\Shop\Product::query()
+                                            ->whereHas( 'categories',
+                                                fn( \Illuminate\Database\Eloquent\Builder $builder ) => $builder->whereIn( 'category_id',
+                                                    $product->categories->pluck( 'id' ) ) )
+                                            ->limit( 5 )
+                                            ->get();
+
+        return view( 'pages.detail', compact( 'product', 'featured' ) );
     } )->name( 'products.show' );
