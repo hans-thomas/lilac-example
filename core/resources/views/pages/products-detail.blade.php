@@ -104,7 +104,7 @@
                     <div class="col-lg-7 col-md-6">
                         <div class="detail-content">
                             <p class="stock">
-                                دسترسی:<span>{{ $product->quantity > 0 ? ' موجود در انبار':'اتمام موجودی'}}</span>
+                                دسترسی:<span>{{ $product->quantity > 0 ? ' موجود در انبار':' اتمام موجودی'}}</span>
                             </p>
                             <h5>{{ $product->title }}</h5>
                             <div class="review-area d-flex align-items-center">
@@ -136,24 +136,38 @@
                             <div class="category">
                                 <p>دسته بندی :
                                     @foreach($product->categories as $category)
-                                        <a href="#">{{ $category->name }}</a> {{ $loop->last ? null:', ' }}
+                                        <a href="{{ route('categories.show',$category) }}">{{ $category->name }}</a> {{ $loop->last ? null:', ' }}
                                     @endforeach
                                 </p>
                             </div>
 
                             <div class="border-area">
-                                <div class="cart-part d-flex align-items-center">
-                                    <div class="d-flex number-spinner">
-                                        <button data-dir="dwn" class="down-btn"><i class="fas fa-minus"></i></button>
-                                        <input type="text" class="form-control text-center input-value" value="1">
-                                        <button data-dir="up" class="up-btn"><i class="fas fa-plus"></i></button>
+                                @if($product->quantity > 0)
+
+                                    <div class="cart-part d-flex align-items-center">
+                                        <div class="d-flex number-spinner">
+                                            <button data-dir="dwn" class="down-btn"><i class="fas fa-minus"></i>
+                                            </button>
+                                            <input type="text" class="form-control text-center input-value"
+                                                   value="1">
+                                            <button data-dir="up" class="up-btn"><i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <a href="#!" class="cart">سبد خرید <span class="btn-dot"></span></a>
+                                        <div class="add-more d-flex align-items-center">
+                                            <a href="#!"><i class="flaticon-heart"></i></a>
+                                            <a href="#!"><i class="flaticon-refresh"></i></a>
+                                        </div>
                                     </div>
-                                    <a href="#!" class="cart">سبد خرید <span class="btn-dot"></span></a>
-                                    <div class="add-more d-flex align-items-center">
-                                        <a href="#!"><i class="flaticon-heart"></i></a>
-                                        <a href="#!"><i class="flaticon-refresh"></i></a>
+                                @else
+                                    <div class="cart-part d-flex align-items-center">
+                                        <a href="#!" class="cart">موجود شد خبرم کن<span class="btn-dot"></span></a>
+                                        <div class="add-more d-flex align-items-center">
+                                            <a href="#!"><i class="flaticon-heart"></i></a>
+                                            <a href="#!"><i class="flaticon-refresh"></i></a>
+                                        </div>
                                     </div>
-                                </div>
+                                @endif
                             </div>
                             <div class="share d-flex align-items-center">
                                 <h5>اشتراک گذاری : </h5>

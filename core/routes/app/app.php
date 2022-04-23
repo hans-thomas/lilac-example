@@ -8,7 +8,7 @@
 
     Route::get( '/', IndexController::class )->name( 'home' );
 
-    Route::get( '/categories/{category}', [ CategoryController::class, 'show' ] )->name( 'categories.index' );
+    Route::get( '/categories/{category}', [ CategoryController::class, 'show' ] )->name( 'categories.show' );
 
     Route::get( '/products/{product}', [ ProductController::class, 'show' ] )->name( 'products.show' );
 
