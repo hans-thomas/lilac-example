@@ -1,42 +1,15 @@
 <?php
 
 
-    Route::get( '/', function() {
-        return view( 'pages.index' );
-    } )->name( 'home' );
+    use App\Http\Controllers\V1\Home\IndexController;
+    use App\Http\Controllers\V1\Shop\CategoryController;
+    use App\Http\Controllers\V1\Shop\ProductController;
+    use App\Http\Controllers\V1\Shop\SetController;
 
-    Route::get( '/categories/{category}', function( \App\Models\Shop\Category $category ) {
+    Route::get( '/', IndexController::class )->name( 'home' );
 
-        return view( 'pages.list', [
-            'sets' => \App\Models\Shop\Set::query()
-                //->with( 'products' )
-                                          ->whereHas( 'products',
-                    fn( \Illuminate\Database\Eloquent\Builder $builder ) => $builder->whereHas( 'categories',
-                        fn( \Illuminate\Database\Eloquent\Builder $builder ) => $builder->where( 'category_product.category_id',
-                            $category->id ) ) )->paginate()
-        ] );
-    } )->name( 'categories.index' );
+    Route::get( '/categories/{category}', [ CategoryController::class, 'show' ] )->name( 'categories.index' );
 
-    Route::get( '/products/{product}', function( \App\Models\Shop\Product $product ) {
-        $product->loadMissing( 'categories' );
-        $featured = \App\Models\Shop\Product::query()
-                                            ->whereHas( 'categories',
-                                                fn( \Illuminate\Database\Eloquent\Builder $builder ) => $builder->whereIn( 'category_id',
-                                                    $product->categories->pluck( 'id' ) ) )
-                                            ->limit( 5 )
-                                            ->get();
+    Route::get( '/products/{product}', [ ProductController::class, 'show' ] )->name( 'products.show' );
 
-        return view( 'pages.products-detail', compact( 'product', 'featured' ) );
-    } )->name( 'products.show' );
-
-    Route::get( '/sets/{set}', function( \App\Models\Shop\Set $set ) {
-        $set->loadMissing( 'products' );
-        $featured = \App\Models\Shop\Product::query()
-                                            ->whereHas( 'categories',
-                                                fn( \Illuminate\Database\Eloquent\Builder $builder ) => $builder->whereIn( 'product_id',
-                                                    $set->products()->pluck( 'id' ) ) )
-                                            ->limit( 5 )
-                                            ->get();
-
-        return view( 'pages.sets-detail', compact( 'set', 'featured' ) );
-    } )->name( 'sets.show' );
+    Route::get( '/sets/{set}', [ SetController::class, 'show' ] )->name( 'sets.show' );
