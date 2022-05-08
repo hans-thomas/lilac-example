@@ -13,7 +13,7 @@
          * @return void
          */
         public function run() {
-            Product::factory()->count( 500 )->create()->each( fn( Product $product ) => $product->categories()
+            Product::factory()->count( 150 )->create()->each( fn( Product $product ) => $product->categories()
                                                                                                 ->sync( Category::query()
                                                                                                                 ->inRandomOrder()
                                                                                                                 ->take( rand( 2,

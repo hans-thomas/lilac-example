@@ -14,6 +14,8 @@
             Schema::create( 'product_set', function( Blueprint $table ) {
                 $table->foreignIdFor( \App\Models\Shop\Set::class )->constrained();
                 $table->foreignIdFor( \App\Models\Shop\Product::class )->constrained();
+
+                $table->primary( [ 'set_id', 'product_id' ] );
             } );
         }
 

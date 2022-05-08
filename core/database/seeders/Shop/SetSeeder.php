@@ -13,11 +13,11 @@
          * @return void
          */
         public function run() {
-            Set::factory()->count( 200 )->create()->each( function( Set $set ) {
+            Set::factory()->count( 400 )->create()->each( function( Set $set ) {
                 $set->products()->sync( Product::query()
                                                ->select( 'id' )
                                                ->inRandomOrder()
-                                               ->limit( rand( 2, 4 ) )
+                                               ->limit( rand( 8, 12 ) )
                                                ->pluck( 'id' ) );
             } );
         }

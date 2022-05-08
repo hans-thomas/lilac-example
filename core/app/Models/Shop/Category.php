@@ -6,7 +6,10 @@
     use Illuminate\Database\Eloquent\Model;
     use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-    class Category extends Model {
+    /**
+ * @mixin IdeHelperCategory
+ */
+class Category extends Model {
         use HasFactory;
 
         protected $fillable = [
