@@ -6,6 +6,6 @@
 
     class IndexController extends Controller {
         public function __invoke() {
-            return view( 'pages.index' );
+            return view( 'pages.home' );
         }
     }

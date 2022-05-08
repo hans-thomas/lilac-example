@@ -9,7 +9,7 @@
 
     class CategoryController extends Controller {
         public function show( Category $category ) {
-            return view( 'pages.list', [
+            return view( 'pages.category-index', [
                 'sets' => Set::query()
                              ->with( 'products' )
                              ->whereHas( 'products', fn( Builder $builder ) => $builder->whereHas( 'categories',
