@@ -12,8 +12,8 @@
             return view( 'pages.category-index', [
                 'sets' => Set::query()
                              ->with( 'products' )
-                             ->whereHas( 'products', fn( Builder $builder ) => $builder->whereHas( 'categories',
-                                 fn( Builder $builder ) => $builder->where( 'category_product.category_id',
+                             ->whereHas( 'products', fn( Builder $products ) => $products->whereHas( 'categories',
+                                 fn( Builder $categories ) => $categories->where( ( new Category )->getForeignKey(),
                                      $category->id ) ) )
                              ->paginate()
             ] );
