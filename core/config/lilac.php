@@ -5,6 +5,5 @@
         'relatedEntityRelation'    => 'products',
         'entity'                   => \App\Models\Shop\Product::class,
         'relatedWrappedByRelation' => 'sets',
-        'trainer'                  => \Hans\Lilac\Trainers\AdvancedTrainer::class,
-        'expires'                  => 20
+        'trainer'                  => \Hans\Lilac\Trainers\AdvancedTrainer::class
     ];
