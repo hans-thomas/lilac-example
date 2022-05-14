@@ -7,9 +7,9 @@
                         <div class="image-area">
                             <div class="product-gallery-tab swiper-container" data-gallery="{{ $product->id }}">
                                 <div class="swiper-wrapper">
-                                    @foreach(range(1,4) as $key)
+                                    @foreach(range(1,4) as $index => $key)
                                         <div class="item swiper-slide">
-                                            <img id="zoom_0{{ $key }}"
+                                            <img id="zoom_0{{ $index }}"
                                                  src="{{ asset("assets/images/shop/img{$key}.jpg") }}"
                                                  alt="Product"
                                                  data-zoom-image="{{ asset("assets/images/shop/img{$key}.jpg") }}">
